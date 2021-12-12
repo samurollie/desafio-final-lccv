@@ -1,0 +1,268 @@
+<div class="d-flex flec-column flex-fill">
+  <div class="container-fluid mt-1">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Cadastrar contrato
+        </li>
+      </ol>
+    </nav>
+
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Cadastrar contrato</h5>
+      </div>
+
+      <div class="card-body">
+        <!-- Abas Config -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="geral-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#geral"
+              type="button"
+              role="tab"
+              aria-controls="geral"
+              aria-selected="true"
+            >
+              Geral
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="itens-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#itens"
+              type="button"
+              role="tab"
+              aria-controls="itens"
+              aria-selected="true"
+            >
+              Itens
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="projetos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#projetos"
+              type="button"
+              role="tab"
+              aria-controls="projetos"
+              aria-selected="true"
+            >
+              Projetos
+            </button>
+          </li>
+        </ul>
+        <!-- Abas Config -->
+
+        <div class="tab-content mt-2" id="myTabContent">
+          <!-- Aba Geral -->
+          <div
+            class="tab-pane fade show active"
+            id="geral"
+            role="tabpanel"
+            aria-labelledby="geral-tab"
+          >
+            <form>
+              <div class="row g-3">
+                <div class="col">
+                  <label for="numero" class="form-label"
+                    >Número (nnn/aaaa)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numero"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="prestador" class="form-label">Prestador</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prestador"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="valor" class="form-label">Valor</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="valor"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col">
+                  <label for="inicio_vigencia" class="form-label"
+                    >Início da vigência</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="inicio_vigencia"
+                  />
+                </div>
+                <div class="col">
+                  <label for="termino_vigencia" class="form-label"
+                    >Término da vigência</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="termino_vigencia"
+                  />
+                </div>
+              </div>
+              <!-- <div class="alert alert-success text-center mt-1" role="alert">
+                  Salvo com sucesso!
+                </div> -->
+            </form>
+          </div>
+          <!-- Aba Geral -->
+
+          <!-- Aba Itens -->
+          <div
+            class="tab-pane fade"
+            id="itens"
+            role="tabpanel"
+            aria-labelledby="itens-tab"
+          >
+            <form>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h5 class="card-title">Itens</h5>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-small"
+                      data-bs-toggle="modal"
+                      data-bs-target="#CadastrarItemModal"
+                    >
+                      <i class="bi bi-plus-lg"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Serviço</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Valor unitário</th>
+                        <th scope="col">Valor total</th>
+                        <th scope="col">Itens</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Teste</td>
+                        <td>1</td>
+                        <td>10,00</td>
+                        <td>10,00</td>
+                        <td>
+                          <!-- Button trigger modal -->
+                          <button
+                            type="button"
+                            class="btn btn-primary btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#VisualizarItemModal"
+                          >
+                            <i class="bi bi-search"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="row">Total</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10,00</td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Aba Itens -->
+
+          <!-- Aba Projetos -->
+          <div
+            class="tab-pane fade"
+            id="projetos"
+            role="tabpanel"
+            aria-labelledby="projetos-tab"
+          >
+            <form>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h5 class="card-title">Projetos</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Projeto</th>
+                        <th scope="col">Valor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Teste</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="row">Total</th>
+                        <td></td>
+                        <td>10,00</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Aba Projetos -->
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end">
+          <div class="btn-group gap-1" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Voltar</button>
+            <button type="button" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
