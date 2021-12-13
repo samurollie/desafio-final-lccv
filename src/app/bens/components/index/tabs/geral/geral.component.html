@@ -1,0 +1,105 @@
+<form>
+  <div class="row g-3">
+    <div class="col">
+      <label for="numero" class="form-label">Número</label>
+      <input
+        type="number"
+        class="form-control"
+        id="numero"
+        disabled
+      />
+    </div>
+    <div class="col">
+      <!-- <label for="fornecedor" class="form-label"
+        >Fornecedor (razão social)</label
+      >
+      <input type="text" class="form-control" id="fornecedor" /> -->
+      <label for="fornecedor" class="form-label">Fornecedor</label>
+      <input
+        class="form-control"
+        list="fornecedorOptions"
+        id="fornecedor"
+        placeholder="Digite um termo..."
+      />
+      <datalist id="fornecedorOptions">
+        <option value="Fornecedor 1"></option>
+        <option value="Fornecedor 2"></option>
+        <option value="Fornecedor 3"></option>
+        <option value="Fornecedor 4"></option>
+      </datalist>
+    </div>
+  </div>
+  <div class="row g-3">
+    <div class="col">
+      <!-- <label for="nota-fiscal" class="form-label"
+        >Nota fiscal</label
+      >
+      <input type="text" class="form-control" id="nota-fiscal" /> -->
+      <label for="nota-fiscal" class="form-label"
+        >Nota fiscal</label
+      >
+      <input
+        class="form-control"
+        list="notaFiscalOptions"
+        id="nota-fiscal"
+        placeholder="Digite um termo..."
+      />
+      <datalist id="notaFiscalOptions">
+        <option value="Nota Fiscal 1"></option>
+        <option value="Nota Fiscal 2"></option>
+        <option value="Nota Fiscal 3"></option>
+        <option value="Nota Fiscal 4"></option>
+      </datalist>
+    </div>
+    <div class="col">
+      <!-- <label for="item-nota-fiscal" class="form-label"
+        >Item Nota fiscal</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="item-nota-fiscal"
+      /> -->
+      <label for="item-nota-fiscal" class="form-label"
+        >Item nota fiscal</label
+      >
+      <input
+        class="form-control"
+        list="itemNotaFiscalOptions"
+        id="item-nota-fiscal"
+        placeholder="Digite um termo..."
+      />
+      <datalist id="itemNotaFiscalOptions">
+        <option value="Item 1"></option>
+        <option value="Item 2"></option>
+        <option value="Item 3"></option>
+        <option value="Item 4"></option>
+      </datalist>
+    </div>
+    <div class="col">
+      <label for="quantidade-vinculada" class="form-label"
+        >Quantidade vinculada</label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="quantidade-vinculada"
+        disabled
+      />
+    </div>
+    <div class="col">
+      <label for="quantidade-disponivel" class="form-label"
+        >Quantidade disponível</label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="quantidade-disponivel"
+        disabled
+      />
+    </div>
+  </div>
+  <!-- <div class="alert alert-success text-center mt-1" role="alert">
+      Salvo com sucesso!
+    </div> -->
+</form>
