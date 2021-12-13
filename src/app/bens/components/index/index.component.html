@@ -107,7 +107,9 @@
                     >Nota fiscal</label
                   >
                   <input type="text" class="form-control" id="nota-fiscal" /> -->
-                  <label for="nota-fiscal" class="form-label">Nota fiscal</label>
+                  <label for="nota-fiscal" class="form-label"
+                    >Nota fiscal</label
+                  >
                   <input
                     class="form-control"
                     list="notaFiscalOptions"
@@ -190,15 +192,7 @@
                     <div class="d-flex align-items-center">
                       <h5 class="card-title">Bens cadastrados</h5>
                     </div>
-                    <!-- Button trigger modal -->
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-small"
-                      data-bs-toggle="modal"
-                      data-bs-target="#CadastrarBemModal"
-                    >
-                      <i class="bi bi-plus-lg"></i>
-                    </button>
+                    <cadastro-bem></cadastro-bem>
                   </div>
                 </div>
 
@@ -220,15 +214,6 @@
                         <td>Produto 1</td>
                         <td>10,00</td>
                         <td>
-                          <!-- Button trigger modal -->
-                          <button
-                            type="button"
-                            class="btn btn-primary btn-sm"
-                            data-bs-toggle="modal"
-                            data-bs-target="#VisualizarBemModal"
-                          >
-                            <i class="bi bi-search"></i>
-                          </button>
                         </td>
                       </tr>
                     </tbody>
@@ -256,8 +241,14 @@
             aria-labelledby="observacoes-tab"
           >
             <form>
-              <label for="observacoes" class="form-label">Observações</label>
-              <input type="text" class="form-control" id="observacoes" />
+              <div class="col">
+                <label for="observacoes" class="form-label">Observações</label>
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="observacoes"
+                ></textarea>
+              </div>
             </form>
           </div>
           <!-- Aba obeservacoes -->
@@ -278,130 +269,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal Visualizar Item-->
-  <div
-    class="modal fade"
-    id="VisualizarBemModal"
-    tabindex="-1"
-    aria-labelledby="VisualizarBemModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="VisualizarBemModalLabel">
-            Visualizar bem
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <dl>
-            <dt>Estado</dt>
-            <dd>estado</dd>
-
-            <dt>Situação de uso</dt>
-            <dd>Projeto 1</dd>
-
-            <dt>Marca</dt>
-            <dd>Marca 1</dd>
-            <!-- other terms and definitions -->
-          </dl>
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Visualizar Item-->
-
-  <!-- Modal Cadastrar Item-->
-  <div
-    class="modal fade"
-    id="CadastrarBemModal"
-    tabindex="-1"
-    aria-labelledby="CadastrarBemModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="CadastrarBemModalLabel">Cadastrar bem</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="row g-3">
-              <div class="col">
-                <label for="quantidade" class="form-label">Quantidade</label>
-                <input type="number" class="form-control" id="quantidade" />
-              </div>
-              <div class="col">
-                <label for="marca" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="marca" />
-              </div>
-              <div class="col">
-                <label for="valor-unitario" class="form-label"
-                  >Valor Unitário</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="valor-unitario"
-                  disabled
-                />
-              </div>
-            </div>
-            <div class="row g-3">
-              <div class="col">
-                <label for="inicio-garantia" class="form-label"
-                  >Data de Início da garantia</label
-                >
-                <input type="date" class="form-control" id="inicio-garantia" />
-              </div>
-              <div class="col">
-                <label for="termino-garantia" class="form-label"
-                  >Data de término da garantia</label
-                >
-                <input type="date" class="form-control" id="termino-garantia" />
-              </div>
-            </div>
-            <div class="row g-3">
-              <div class="col">
-                <label for="observacoes" class="form-label">Observações</label>
-                <input type="text" class="form-control" id="observacoes" />
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Cadastrar Item-->
 </div>

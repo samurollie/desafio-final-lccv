@@ -1,1 +1,87 @@
-<p>test</p>
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary btn-small"
+  data-bs-toggle="modal"
+  data-bs-target="#CadastrarBemModal"
+>
+  <i class="bi bi-plus-lg"></i>
+</button>
+
+<!-- Modal Cadastrar Bem-->
+<div
+  class="modal fade"
+  id="CadastrarBemModal"
+  tabindex="-1"
+  aria-labelledby="CadastrarBemModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="CadastrarBemModalLabel">Cadastrar bem</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row g-3">
+            <div class="col">
+              <label for="quantidade" class="form-label">Quantidade</label>
+              <input type="number" class="form-control" id="quantidade" />
+            </div>
+            <div class="col">
+              <label for="marca" class="form-label">Marca</label>
+              <input type="text" class="form-control" id="marca" />
+            </div>
+            <div class="col">
+              <label for="valor-unitario" class="form-label"
+                >Valor Unitário</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="valor-unitario"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="inicio-garantia" class="form-label"
+                >Data de Início da garantia</label
+              >
+              <input type="date" class="form-control" id="inicio-garantia" />
+            </div>
+            <div class="col">
+              <label for="termino-garantia" class="form-label"
+                >Data de término da garantia</label
+              >
+              <input type="date" class="form-control" id="termino-garantia" />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="observacoes-label" class="form-label">Observações</label>
+              <textarea
+                class="form-control"
+                rows="5"
+                id="observacoes-label"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Cadastrar Bem-->
