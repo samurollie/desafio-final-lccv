@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastroComponent } from './cadastro/cadastro.component';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
-
-
 
 const routes: Routes = [
   {
-    path: 'cadastrar',
-    component: CadastroComponent,
+    path: 'bens',
+    loadChildren: () => import('./bens/bens.module').then((m) => m.BensModule),
   },
 ];
 
