@@ -1,1 +1,329 @@
-<p>index works!</p>
+<div class="d-flex flec-column flex-fill">
+  <div class="container-fluid mt-1">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Cadastro de bens
+        </li>
+      </ol>
+    </nav>
+
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Cadastro de bens</h5>
+      </div>
+
+      <div class="card-body">
+        <!-- Abas Config -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="geral-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#geral"
+              type="button"
+              role="tab"
+              aria-controls="geral"
+              aria-selected="true"
+            >
+              Geral
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="bens-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#bens"
+              type="button"
+              role="tab"
+              aria-controls="bens"
+              aria-selected="true"
+            >
+              Bens
+            </button>
+          </li>
+        </ul>
+        <!-- Abas Config -->
+
+        <div class="tab-content mt-2" id="myTabContent">
+          <!-- Aba Geral -->
+          <div
+            class="tab-pane fade show active"
+            id="geral"
+            role="tabpanel"
+            aria-labelledby="geral-tab"
+          >
+            <form>
+              <div class="row g-3">
+                <div class="col">
+                  <label for="numero" class="form-label"
+                    >Número</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="numero"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="fornecedor" class="form-label">Fornecedor</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fornecedor"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col">
+                  <label for="nota-fiscal" class="form-label">Nota fiscal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nota-fiscal"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="item-nota-fiscal" class="form-label">Item Nota fiscal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="item-nota-fiscal"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="quantidade-vinculada" class="form-label"
+                    >Quantidade vinculada</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantidade-vinculada"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="quantidade-disponivel" class="form-label"
+                    >Quantidade disponível</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantidade-disponivel"
+                    disabled
+                  />
+                </div>
+              </div>
+              <!-- <div class="alert alert-success text-center mt-1" role="alert">
+                  Salvo com sucesso!
+                </div> -->
+            </form>
+          </div>
+          <!-- Aba Geral -->
+
+          <!-- Aba bens -->
+          <div
+            class="tab-pane fade"
+            id="bens"
+            role="tabpanel"
+            aria-labelledby="bens-tab"
+          >
+            <form>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <h5 class="card-title">Bens cadastrados</h5>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-small"
+                      data-bs-toggle="modal"
+                      data-bs-target="#CadastrarBemModal"
+                    >
+                      <i class="bi bi-plus-lg"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tombamento</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Itens</th>
+                        <th scope="col">bens</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Teste</td>
+                        <td>1</td>
+                        <td>10,00</td>
+                        <td>10,00</td>
+                        <td>
+                          <!-- Button trigger modal -->
+                          <button
+                            type="button"
+                            class="btn btn-primary btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#VisualizarBemModal"
+                          >
+                            <i class="bi bi-search"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="row">Total</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10,00</td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Aba bens -->
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end">
+          <div class="btn-group gap-1" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Voltar</button>
+            <button type="button" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal Visualizar Item-->
+  <div class="modal fade" id="VisualizarBemModal" tabindex="-1" aria-labelledby="VisualizarBemModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="VisualizarBemModalLabel">Visualizar bem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <dl>
+            <dt>Estado</dt>
+            <dd>estado</dd>
+
+            <dt>Situação de uso</dt>
+            <dd>Projeto 1</dd>
+
+            <dt>Marca</dt>
+            <dd>Marca 1</dd>
+            <!-- other terms and definitions -->
+          </dl>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Visualizar Item-->
+
+<!-- Modal Cadastrar Item-->
+<div
+  class="modal fade"
+  id="CadastrarBemModal"
+  tabindex="-1"
+  aria-labelledby="CadastrarBemModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="CadastrarBemModalLabel">Cadastrar bem</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row g-3">
+
+              <div class="col">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantidade"
+                  disabled
+                />
+              </div>
+              <div class="col">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" disabled />
+              </div>
+              <div class="col">
+                <label for="valor-unitario" class="form-label"
+                  >Valor Unitário</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="valor-unitario"
+                  disabled
+                />
+              </div>
+          </div>
+          <div class="row g-3">
+
+              <div class="col">
+                <label for="inicio-garantia" class="form-label"
+                  >Data de Início da garantia</label
+                >
+                <input type="date" class="form-control" id="inicio-garantia" />
+              </div>
+              <div class="col">
+                <label for="termino-garantia" class="form-label"
+                  >Data de término da garantia</label
+                >
+                <input type="date" class="form-control" id="termino-garantia" />
+              </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <label for="observ" class="form-label">Observações</label>
+              <input type="text" class="form-control" id="observ" disabled />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Cadastrar Item-->
